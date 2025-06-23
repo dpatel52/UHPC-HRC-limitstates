@@ -1,5 +1,16 @@
-# UHPC-HRC-limitstates
-Parametric modeling and limit state prediction for reinforced UHPC flexural beams using a closed-form analytical framework.
-This repository implements the analytical framework presented in the paper "Parametric Modeling of Limit States for Hybrid Reinforced UHPC Flexural Beams". The model computes full flexural responses (moment-curvature and load-deflection) using material-specific quadrilinear tension, bilinear compression, and reinforcement models. It supports evaluation of key performance-based and material limit states, and enables design, validation, and inverse-analysis for UHPC and FRC beam systems.
+# Parametric UHPC Flexural Model
 
-The package includes all core model functions, plotting tools, deflection calculations, and example scripts to simulate experimental setups and perform case studies.
+[![PyPI version](https://badge.fury.io/py/parametric-uhpc.svg)](https://pypi.org/project/parametric-uhpc)  
+[![Python Versions](https://img.shields.io/pypi/pyversions/parametric-uhpc)](https://pypi.org/project/parametric-uhpc)  
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+A parametric, closed-form Python package for ultra-high-performance concrete (UHPC) flexural limit-state analysis.  
+Compute moment–curvature envelopes, load–deflection response, and internal force distributions using customizable tension, compression, and reinforcement constitutive models.
+
+## Installation
+
+Install from PyPI:
+
+```bash
+pip install parametric-uhpc
+
