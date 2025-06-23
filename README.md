@@ -1,7 +1,7 @@
 # UHPC-HRC-LimitStates
 
-[![GitHub Release](https://img.shields.io/github/v/release/dpatel52/UHPC-HRC-limitstates)](https://github.com/dpatel52/UHPC-HRC-limitstates/releases)&nbsp;
-[![PyPI version](https://badge.fury.io/py/parametric-uhpc.svg)](https://pypi.org/project/parametric-uhpc)&nbsp;
+[![GitHub Release](https://img.shields.io/github/v/release/dpatel52/UHPC-HRC-limitstates)](https://github.com/dpatel52/UHPC-HRC-limitstates/releases)
+[![PyPI version](https://badge.fury.io/py/parametric-uhpc.svg)](https://pypi.org/project/parametric-uhpc/1.0.0/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/parametric-uhpc)](https://pypi.org/project/parametric-uhpc)&nbsp;
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
