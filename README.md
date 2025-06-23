@@ -22,7 +22,7 @@ Optionally, you can **override any model with experimental Excel files** (flexur
 ### 1 · Stable release from PyPI
 
 ```bash
-pip install parametric-uhpc            # grabs the latest version
+pip install parametric-uhpc==1.0.0            # grabs the latest version
 ```
 ---
 
