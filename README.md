@@ -27,48 +27,60 @@ pip install parametric-uhpc==1.0.0            # grabs the latest version
 ## 🚀 Quick-start
 
 ```
+# example_full_custom.py
+
 from parametric_uhpc import run_full_model
 
-# 1 · Default run – no Excel overrides – plots + returns results
-results = run_full_model(plot=True)
-
-# 2 · Custom run – point to your own Excel files *and* tweak geometry/materials
+# Full custom call
 results = run_full_model(
-    # Excel overrides (omit or set to None to skip)
-    excel_flex="examples/data/flexure.xlsx",
-    excel_tension="examples/data/tension.xlsx",
-    excel_compression="examples/data/compression.xlsx",
-    excel_reinforcement="examples/data/reinforcement.xlsx",
 
-    # ─── Geometry & loading ───────────────────────────────────────
-    L=1500.0,      # span (mm)
-    b=200.0,       # width
-    h=250.0,       # depth
-    pointBend=3,   # 3-point (use 4 for four-point)
-    S2=500.0,      # load-point separation for 4-PB (ignored for 3-PB)
-    Lp=500.0,      # plastic-hinge length (hardening)
-    cover=30.0,    # concrete cover
+    excel_flex        = "***/UHPC-HRC-limitstates/examples/data/flexure.xlsx",
+    excel_tension     = "***/UHPC-HRC-limitstates/examples/data/tension.xlsx",
+    excel_compression = "***/UHPC-HRC-limitstates/examples/data/compression.xlsx",
+    excel_reinforcement = "***/UHPC-HRC-limitstates/examples/data/reinforcement.xlsx",
 
-    # ─── Tension model (UHPC) ─────────────────────────────────────
-    E=35000.0,             # MPa
-    epsilon_cr=1e-4,       # first-crack strain
-    mu_1=0.30, mu_2=0.30, mu_3=0.30,
-    beta_1=1.01, beta_2=25.0, beta_3=300.0,
+    # Geometry & loadingY
+    L         = 1092.0,    # mm
+    b         = 101.0,     # mm
+    h         = 203.0,     # mm
+    pointBend = 4,         # 3 or 4 point bend only
+    S2        = 254.0,     # mm distance between load points
+    Lp        = 254.0,     # mm plastic length (if unknown use Lp=S2 for 4PB and Lp=d for 3PB)
+    cLp        = 125.0,     # mm post-localization plastic length (use cLp = d if unknown)
+    cover     = 38.0,      # mm concrete cover
 
-    # ─── Compression model (UHPC) ────────────────────────────────
-    xi=1.05,   # Ex/E
-    omega=8.0,
-    mu_c=1.0,
-    ecu=0.0035,
+    # Material (tension)
+    E = 45526.0,
+    epsilon_cr = 0.00015,
+    sigma_t1 = 11.5,
+    sigma_t2 = 5.5,
+    sigma_t3 = 1.5,
+    epsilon_t1 = 0.003,
+    epsilon_t2 = 0.02,
+    epsilon_t3 = 0.08,
 
-    # ─── Steel model ─────────────────────────────────────────────
-    Es=210000.0,            # MPa
-    kappa=(550e6/210000e6)/1e-4,   # (fy/Es)/εcr  for fy = 550 MPa
-    mu_s=1.1,
+    # Material (compression)
+    Ec = 45526.0 * 1.01,
+    sigma_cy = 200,
+    sigma_cu = 30,
+    ecu = 0.025,
 
-    # ─── Reinforcement layout ────────────────────────────────────
-    botDiameter=12.0, botCount=3,
-    topDiameter=10.0, topCount=2,
+    # Steel
+    Es = 200000.0,
+    fsy = 460,
+    fsu = 670,
+    epsilon_su = 0.14,
 
-    plot=True             # turn plots on/off
+    # Reinforcement geometry
+    botDiameter    = (3/8)*25.4, # mm
+    botCount       = 2,
+    topDiameter    = 10.0,
+    topCount       = 0,
+
+    # Turn off plotting if you just want numbers
+    plot      = True
 )
+
+# Summarize the results
+print("→ Peak moment (N·mm):", results["moment"].max())
+print("→ Peak Load (N):", results["load"].max())
