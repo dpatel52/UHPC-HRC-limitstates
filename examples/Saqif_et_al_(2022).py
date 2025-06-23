@@ -5,10 +5,10 @@ from parametric_uhpc import run_full_model
 # Full custom call
 results = run_full_model(
 
-    excel_flex        = "I:/My Drive/PhD + Research/PhD/03 Code Conversion/UHPC-HRC-limitstates/examples/data/flexure.xlsx",
-    excel_tension     = "I:/My Drive/PhD + Research/PhD/03 Code Conversion/UHPC-HRC-limitstates/examples/data/tension.xlsx",
-    excel_compression = "I:/My Drive/PhD + Research/PhD/03 Code Conversion/UHPC-HRC-limitstates/examples/data/compression.xlsx",
-    excel_reinforcement = "I:/My Drive/PhD + Research/PhD/03 Code Conversion/UHPC-HRC-limitstates/examples/data/reinforcement.xlsx",
+    excel_flex        = "***/UHPC-HRC-limitstates/examples/data/flexure.xlsx",
+    excel_tension     = "***/UHPC-HRC-limitstates/examples/data/tension.xlsx",
+    excel_compression = "***/UHPC-HRC-limitstates/examples/data/compression.xlsx",
+    excel_reinforcement = "***/UHPC-HRC-limitstates/examples/data/reinforcement.xlsx",
 
     # Geometry & loadingY
     L         = 1092.0,    # mm
