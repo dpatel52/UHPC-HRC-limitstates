@@ -25,7 +25,6 @@ Optionally, you can **override any model with experimental Excel files** (flexur
 pip install parametric-uhpc            # grabs the latest version
 ```
 ---
-### From PyPI
 
 ## 🚀 Quick-start
 
