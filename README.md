@@ -3,7 +3,7 @@
 [![Python Versions](https://img.shields.io/pypi/pyversions/parametric-uhpc)](https://pypi.org/project/parametric-uhpc)&nbsp;
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-A **parametric, closed-form** Python library for ultra-high-performance concrete (**UHPC**) and hybrid-reinforced concrete (**HRC**) flexural limit-state analysis.  
+A **parametric, closed-form** Python library for inelastic simulation of ultra-high-performance concrete (**UHPC**) and hybrid-reinforced concrete (**HRC**) flexural members with limit-state analysis.  
 It can calculate
 
 * **Moment–curvature** envelopes  
