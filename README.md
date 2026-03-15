@@ -6,6 +6,8 @@
 A **parametric, closed-form** Python library for inelastic simulation of ultra-high-performance concrete (**UHPC**) and hybrid-reinforced concrete (**HRC**) flexural members with limit-state analysis.  
 It can calculate
 
+Cite Correct Reference: https://doi.org/10.1016/j.engstruct.2026.122353
+
 * **Moment–curvature** envelopes  
 * **Load–deflection** responses  
 * **Internal-force** distributions  
